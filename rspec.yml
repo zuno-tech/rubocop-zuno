@@ -1,0 +1,12 @@
+# Excluding as we set up the rake specs as 'describe "rake namespace:task", type: :task do' which determines what task
+# is being tested, and this cop doesn't like having a describe block without a class or module name.
+RSpec/DescribeClass:
+  Exclude:
+    - spec/tasks/**/*
+# This is to prevent Rubocop from bugging on a spec helper that doesn't contain an example, which the support ones don't
+RSpec/LeadingSubject:
+  Exclude:
+    - spec/support
+# Allow there to be a max of 4 example groups deep in Rspec tests
+RSpec/NestedGroups:
+  Max: 4

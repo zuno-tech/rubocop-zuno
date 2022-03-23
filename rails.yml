@@ -1,0 +1,20 @@
+Rails/ApplicationController:
+  Exclude:
+    - spec/**/*
+    - test/**/*
+Rails/EnvironmentVariableAccess:
+  AllowReads: true # Enabling allow reads so we can use ENV["VAR"]
+Rails/SkipsModelValidations:
+  Exclude:
+    - db/migrate/**/*
+    - lib/tasks/**/*
+    - spec/**/*
+    - test/**/*
+Rails/UnknownEnv:
+  Environments:
+    - cucumber
+    - development
+    - production
+    - qa
+    - test
+    - uat

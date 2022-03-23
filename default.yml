@@ -1,0 +1,43 @@
+AllCops:
+  Exclude:
+    - "**/*/schema.rb"
+    - Gemfile.lock
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
+  NewCops: enable
+Layout/ClassStructure:
+  Enabled: true
+Layout/LineLength:
+  Exclude:
+    - config/routes.rb
+    - config/routes/*
+  Max: 120
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/**/*
+Metrics/BlockLength:
+  Exclude:
+    - "*.gemspec"
+    - Gemfile
+    - config/routes.rb
+    - config/routes/*
+    - db/migrate/**/*
+    - spec/**/*
+    - test/**/*
+Metrics/ClassLength:
+  Exclude:
+    - db/migrate/**/*
+    - spec/**/*
+    - test/**/*
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/**/*
+    - spec/**/*
+    - test/**/*
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
