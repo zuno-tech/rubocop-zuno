@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Boxt"]
   spec.description = "Base Rubocop settings for all Boxt Ruby projects"
   spec.email = ["developers@boxt.co.uk"]
-  spec.homepage = "https://github.com/boxt/ruby-style-guide"
+  spec.homepage = "https://github.com/boxt/boxt_rubocop"
   spec.license = "MIT"
   spec.metadata = {
     "rubygems_mfa_required" => "true"
