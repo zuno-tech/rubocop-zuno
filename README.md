@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/boxt_rubocop.svg)](https://badge.fury.io/rb/boxt_rubocop)
 [![CI](https://github.com/boxt/boxt_rubocop/actions/workflows/ci.yml/badge.svg)](https://github.com/boxt/boxt_rubocop/actions/workflows/ci.yml)
 
-Base Rubocop settings for all Boxt Ruby projects.
+Base [Rubocop](https://rubocop.org) settings for all Boxt Ruby projects.
 
 ## Requirements
 
