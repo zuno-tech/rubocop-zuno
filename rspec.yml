@@ -3,6 +3,9 @@
 RSpec/DescribeClass:
   Exclude:
     - spec/tasks/**/*
+# Avoid opening modules and defining specs within them
+RSpec/DescribedClassModuleWrapping:
+  Enabled: true
 # This is to prevent Rubocop from bugging on a spec helper that doesn't contain an example, which the support ones don't
 RSpec/LeadingSubject:
   Exclude:
