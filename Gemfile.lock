@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boxt_rubocop (0.0.9)
+    boxt_rubocop (0.0.10)
       rubocop (= 1.30.0)
       rubocop-faker (= 1.1.0)
       rubocop-rails (= 2.14.2)
@@ -199,7 +199,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     strscan (3.0.3)
     thor (1.2.1)
-    timeout (0.2.0)
+    timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
