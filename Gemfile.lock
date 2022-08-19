@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boxt_rubocop (0.0.20)
+    boxt_rubocop (0.0.21)
       rubocop (= 1.35.0)
       rubocop-faker (= 1.1.0)
       rubocop-rails (= 2.15.2)
@@ -100,7 +100,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
-    minitest (5.16.2)
+    minitest (5.16.3)
     net-imap (0.2.3)
       digest
       net-protocol
