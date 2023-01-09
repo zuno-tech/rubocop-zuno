@@ -3,6 +3,7 @@ inherit_from:
 
 require:
   - rubocop-rake
+  - rubocop-rails
   - rubocop-rspec
 
 AllCops:
