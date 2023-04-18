@@ -6,7 +6,7 @@ PATH
       rubocop-faker (= 1.1.0)
       rubocop-rails (= 2.19.1)
       rubocop-rake (= 0.6.0)
-      rubocop-rspec (= 2.19.0)
+      rubocop-rspec (= 2.20.0)
 
 GEM
   remote: https://rubygems.org/
@@ -119,7 +119,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
-    parallel (1.22.1)
+    parallel (1.23.0)
     parser (3.2.2.0)
       ast (~> 2.4.1)
     racc (1.6.2)
@@ -192,7 +192,7 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.19.0)
+    rubocop-rspec (2.20.0)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.13.0)
