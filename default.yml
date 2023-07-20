@@ -6,38 +6,55 @@ AllCops:
     - tmp/**/*
     - vendor/**/*
   NewCops: enable
+
 Layout/ClassStructure:
   Enabled: true
+
 Layout/LineLength:
   Exclude:
     - config/routes.rb
     - config/routes/*
   Max: 120
+
 Metrics/AbcSize:
   Exclude:
     - db/migrate/**/*
+
 Metrics/BlockLength:
+  CountAsOne: ["array", "hash"]
   Exclude:
     - "*.gemspec"
     - Gemfile
+    - config/environments/*
     - config/routes.rb
     - config/routes/*
     - db/migrate/**/*
+    - lib/tasks/**/*
     - spec/**/*
     - test/**/*
+
 Metrics/ClassLength:
+  CountAsOne: ["array", "hash"]
   Exclude:
     - db/migrate/**/*
     - spec/**/*
     - test/**/*
+
 Metrics/MethodLength:
+  CountAsOne: ["array", "heredoc", "hash"]
   Exclude:
     - db/migrate/**/*
     - spec/**/*
     - test/**/*
+
+Metrics/ModuleLength:
+  CountAsOne: ["array", "hash"]
+
 Style/Documentation:
   Enabled: false
+
 Style/DoubleNegation:
   Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes

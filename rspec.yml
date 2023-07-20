@@ -3,13 +3,26 @@
 RSpec/DescribeClass:
   Exclude:
     - spec/tasks/**/*
+
 # Avoid opening modules and defining specs within them
 RSpec/DescribedClassModuleWrapping:
   Enabled: true
+
 # This is to prevent Rubocop from bugging on a spec helper that doesn't contain an example, which the support ones don't
 RSpec/LeadingSubject:
   Exclude:
     - spec/support
+
+# Allow arrays and hashes to be counted as one line in examples
+RSpec/ExampleLength:
+  CountAsOne: ["array", "hash"]
+
+# Because 5 is a bit mean
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
 # Allow there to be a max of 4 example groups deep in Rspec tests
 RSpec/NestedGroups:
   Max: 4
+
+
