@@ -6,7 +6,7 @@ PATH
       rubocop-faker (= 1.1.0)
       rubocop-rails (= 2.20.2)
       rubocop-rake (= 0.6.0)
-      rubocop-rspec (= 2.23.1)
+      rubocop-rspec (= 2.23.2)
 
 GEM
   remote: https://rubygems.org/
@@ -199,7 +199,7 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.23.1)
+    rubocop-rspec (2.23.2)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
