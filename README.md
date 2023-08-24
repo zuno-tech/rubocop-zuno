@@ -47,6 +47,7 @@ inherit_gem:
 The following Rubocop gems are also installed with this gem:
 
 * [rubocop-faker](https://github.com/koic/rubocop-faker)
+* [rubocop-performance](https://github.com/rubocop/rubocop-performance)
 * [rubocop-rails](https://github.com/rubocop-hq/rubocop-rails)
 * [rubocop-rake](https://github.com/rubocop-hq/rubocop-rake)
 * [rubocop-rspec](https://github.com/rubocop-hq/rubocop-rspec)
@@ -60,6 +61,7 @@ inherit_gem:
 
 require:
   - rubocop-faker # if your project is using the Faker gem then add this
+  - rubocop-performance # Add this for performance cops
   - rubocop-rails # if your project is a Rails app/engine then add this, plus the - rails.yml setting above
   - rubocop-rake # if your project is using rake then add this
   - rubocop-rspec # if your project is using rspec then add this, plus the - rspec.yml setting above
