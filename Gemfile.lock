@@ -5,7 +5,7 @@ PATH
       rubocop (= 1.56.1)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.19.0)
-      rubocop-rails (= 2.20.2)
+      rubocop-rails (= 2.21.0)
       rubocop-rake (= 0.6.0)
       rubocop-rspec (= 2.23.2)
 
@@ -105,7 +105,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
-    minitest (5.19.0)
+    minitest (5.20.0)
     net-imap (0.3.7)
       date
       net-protocol
@@ -199,7 +199,7 @@ GEM
     rubocop-performance (1.19.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.20.2)
+    rubocop-rails (2.21.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
