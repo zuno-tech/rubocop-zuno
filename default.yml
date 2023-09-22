@@ -10,6 +10,10 @@ AllCops:
     - vendor/**/*
   NewCops: enable
 
+Boxt/ApiPathFormat:
+  Description: 'Ensure that the API path uses kebab case'
+  Enabled: false
+
 Layout/ClassStructure:
   Enabled: true
 
