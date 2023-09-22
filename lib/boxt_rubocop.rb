@@ -2,9 +2,6 @@
 
 require "boxt_rubocop/version"
 
-# Require all custom cops defined in api/lib/rubocop/cop/**/*.rb
-Dir[File.join(__dir__, "rubocop", "cop", "**", "*.rb")].sort.each { |file| require file }
-
 module BoxtRubocop
   module_function
 

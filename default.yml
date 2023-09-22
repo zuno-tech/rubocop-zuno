@@ -1,3 +1,6 @@
+require:
+  - ./lib/rubocop/cop/boxt/api_path_format.rb
+
 AllCops:
   Exclude:
     - "**/*/schema.rb"
