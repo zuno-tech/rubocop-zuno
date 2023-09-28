@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path("lib", __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "boxt_rubocop/version"
+require_relative "lib/rubocop/boxt/version"
 
 Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.7"
@@ -16,7 +14,7 @@ Gem::Specification.new do |spec|
   }
   spec.name = "boxt_rubocop"
   spec.summary = "Base Rubocop settings for all Boxt Ruby projects"
-  spec.version = BoxtRubocop::VERSION
+  spec.version = RuboCop::Boxt::VERSION
 
   spec.files = Dir[
     "*.yml",
@@ -26,6 +24,7 @@ Gem::Specification.new do |spec|
     "VERSION",
     "lib/**/*"
   ]
+  spec.require_paths = ["lib"]
 
   # Locking rubocop versions so we can control the pending cops
   spec.add_dependency "rubocop", "1.56.3"

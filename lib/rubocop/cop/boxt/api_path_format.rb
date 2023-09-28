@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "rubocop"
-
 module RuboCop
   module Cop
     module Boxt
@@ -25,7 +23,7 @@ module RuboCop
       #   get  "/installation-days"
       #   namespace "password-resets"
       #
-      class ApiPathFormat < ::RuboCop::Cop::Base
+      class ApiPathFormat < Base
         def_node_matcher :path_defining_method_with_string_path, <<~PATTERN
           (send nil? {:post | :get | :namespace} (:str $_))
         PATTERN
