@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "boxt_rubocop"
-
-require "rspec"
+require "rubocop/rspec/support"
 require "simplecov"
 
 SimpleCov.start do
@@ -27,6 +25,8 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.include RuboCop::RSpec::ExpectOffense
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -70,13 +70,13 @@ RSpec.configure do |config|
   #   # the `--only-failures` and `--next-failure` CLI options. We recommend
   #   # you configure your source control system to ignore this file.
   #   config.example_status_persistence_file_path = "spec/examples.txt"
-  #
-  #   # Limits the available syntax to the non-monkey patched syntax that is
-  #   # recommended. For more details, see:
-  #   #   - http://rspec.info/blog/2012/06/rspecs-new-expectation-syntax/
-  #   #   - http://www.teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
-  #   #   - http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/#zero-monkey-patching-mode
-  #   config.disable_monkey_patching!
+
+  # Limits the available syntax to the non-monkey patched syntax that is
+  # recommended. For more details, see:
+  #   - http://rspec.info/blog/2012/06/rspecs-new-expectation-syntax/
+  #   - http://www.teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
+  #   - http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/#zero-monkey-patching-mode
+  config.disable_monkey_patching!
   #
   #   # Many RSpec users commonly either run the entire suite or an individual
   #   # file, and it's useful to allow more verbose output when running an
@@ -92,18 +92,18 @@ RSpec.configure do |config|
   #   # end of the spec run, to help surface which specs are running
   #   # particularly slow.
   #   config.profile_examples = 10
-  #
-  #   # Run specs in random order to surface order dependencies. If you find an
-  #   # order dependency and want to debug it, you can fix the order by providing
-  #   # the seed, which is printed after each run.
-  #   #     --seed 1234
-  #   config.order = :random
-  #
-  #   # Seed global randomization in this process using the `--seed` CLI option.
-  #   # Setting this allows you to use `--seed` to deterministically reproduce
-  #   # test failures related to randomization by passing the same `--seed` value
-  #   # as the one that triggered the failure.
-  #   Kernel.srand config.seed
+
+  # Run specs in random order to surface order dependencies. If you find an
+  # order dependency and want to debug it, you can fix the order by providing
+  # the seed, which is printed after each run.
+  #     --seed 1234
+  config.order = :random
+
+  # Seed global randomization in this process using the `--seed` CLI option.
+  # Setting this allows you to use `--seed` to deterministically reproduce
+  # test failures related to randomization by passing the same `--seed` value
+  # as the one that triggered the failure.
+  Kernel.srand config.seed
 
   # In suites with this setting, only RSpec.describe is valid as the first describe block
   config.expose_dsl_globally = false

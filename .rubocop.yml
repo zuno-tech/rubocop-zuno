@@ -1,7 +1,5 @@
-inherit_from:
-  - default.yml
-
 require:
+  - boxt_rubocop
   - rubocop-performance
   - rubocop-rake
   - rubocop-rails
