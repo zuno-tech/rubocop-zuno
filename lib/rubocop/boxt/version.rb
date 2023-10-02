@@ -2,6 +2,6 @@
 
 module RuboCop
   module Boxt
-    VERSION = File.read(File.join(File.dirname(__FILE__), "../../../VERSION")).strip
+    VERSION = File.read(File.join(File.dirname(__FILE__), "../../../VERSION")).split("\n").first
   end
 end
