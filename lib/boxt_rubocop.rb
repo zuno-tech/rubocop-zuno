@@ -1,18 +1,11 @@
 # frozen_string_literal: true
 
-require "boxt_rubocop/version"
+require "rubocop"
 
-# Require all custom cops defined in rubocop/cop/**/*.rb
-Dir[File.join(__dir__, "rubocop", "cop", "**", "*.rb")].sort.each { |file| require file }
+require_relative "rubocop/boxt"
+require_relative "rubocop/boxt/version"
+require_relative "rubocop/boxt/inject"
 
-module BoxtRubocop
-  module_function
+RuboCop::Boxt::Inject.defaults!
 
-  ##
-  # Provide a root path helper for the gem root dir
-  #
-  # Returns Pathname
-  def root
-    Pathname.new(File.dirname(__dir__))
-  end
-end
+require_relative "rubocop/cop/boxt_cops"

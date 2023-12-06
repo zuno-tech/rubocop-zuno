@@ -28,15 +28,36 @@ bundle
 
 ## Usage
 
-Add a `.rubocop.yml` file to the root of your project with the following settings:
+Put this into your .rubocop.yml.
+
+```yml
+require:
+ - boxt_rubocop
+ ```
+
+To enable additional configuration for `rubocop-rails` and `rubocop-rspec`, add the following to your .rubocop.yml:
 
 ```yml
 inherit_gem:
   boxt_rubocop:
-    - default.yml # use default cops
     - rails.yml # use Rails cops - see Additional Extensions/Cops
     - rspec.yml # use rspec cops - see Additional Extensions/Cops
 ```
+
+## Creating new custom cops
+
+Use the rake task new_cop to generate a cop template:
+
+```sh
+$ bundle exec rake 'new_cop[Boxt/Name]'
+[create] lib/rubocop/cop/boxt/name.rb
+[create] spec/rubocop/cop/boxt/name_spec.rb
+[modify] lib/rubocop/cop/boxt_cops.rb - `require_relative 'boxt/name'` was injected.
+[modify] A configuration for the cop is added into config/default.yml.
+
+```
+
+Documentation on creating a new cop can be found [here](https://docs.rubocop.org/rubocop/1.56/development.html#create-a-new-cop).
 
 ### NewCops
 
