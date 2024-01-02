@@ -7,7 +7,7 @@ Base [Rubocop](https://rubocop.org) settings for all Boxt Ruby projects.
 
 ## Requirements
 
-* Ruby >= 2.7
+- Ruby >= 3.0
 
 ## Installation
 
@@ -32,8 +32,8 @@ Put this into your .rubocop.yml.
 
 ```yml
 require:
- - boxt_rubocop
- ```
+  - boxt_rubocop
+```
 
 To enable additional configuration for `rubocop-rails` and `rubocop-rspec`, add the following to your .rubocop.yml:
 
@@ -67,11 +67,11 @@ Documentation on creating a new cop can be found [here](https://docs.rubocop.org
 
 The following Rubocop gems are also installed with this gem:
 
-* [rubocop-faker](https://github.com/koic/rubocop-faker)
-* [rubocop-performance](https://github.com/rubocop/rubocop-performance)
-* [rubocop-rails](https://github.com/rubocop-hq/rubocop-rails)
-* [rubocop-rake](https://github.com/rubocop-hq/rubocop-rake)
-* [rubocop-rspec](https://github.com/rubocop-hq/rubocop-rspec)
+- [rubocop-faker](https://github.com/koic/rubocop-faker)
+- [rubocop-performance](https://github.com/rubocop/rubocop-performance)
+- [rubocop-rails](https://github.com/rubocop-hq/rubocop-rails)
+- [rubocop-rake](https://github.com/rubocop-hq/rubocop-rake)
+- [rubocop-rspec](https://github.com/rubocop-hq/rubocop-rspec)
 
 To enable these add the following to your `.rubocop.yml` file.
 
