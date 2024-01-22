@@ -4,6 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    groups:
+      ruby-dependencies:
+          update-types:
+            - "minor"
+            - "patch"
   - package-ecosystem: bundler
     directory: "/"
     schedule:
