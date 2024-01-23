@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boxt_rubocop (2.1.0)
+    boxt_rubocop (2.2.0)
       rubocop (= 1.60.1)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.20.2)
