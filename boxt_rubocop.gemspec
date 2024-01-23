@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/rubocop/boxt/version"
+lib = File.expand_path("lib", __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "rubocop/boxt/version"
 
 Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.0"
