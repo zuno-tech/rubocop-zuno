@@ -14,8 +14,9 @@ RSpec/LeadingSubject:
     - spec/support
 
 # Allow arrays and hashes to be counted as one line in examples
+# Also considers arrays defined with contain_exactly and match_array
 RSpec/ExampleLength:
-  CountAsOne: ["array", "hash"]
+  CountAsOne: ["array", "hash", "contain_exactly", "match_array"]
 
 # Because 5 is a bit mean
 RSpec/MultipleMemoizedHelpers:
