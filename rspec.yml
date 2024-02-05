@@ -13,9 +13,9 @@ RSpec/LeadingSubject:
   Exclude:
     - spec/support
 
-# Allow arrays and hashes to be counted as one line in examples
+# Allow arrays, hashes, and method calls to be counted as one line in examples
 RSpec/ExampleLength:
-  CountAsOne: ["array", "hash"]
+  CountAsOne: ["array", "hash", "method_call"]
 
 # Because 5 is a bit mean
 RSpec/MultipleMemoizedHelpers:
