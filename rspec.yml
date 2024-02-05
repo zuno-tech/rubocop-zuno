@@ -13,10 +13,9 @@ RSpec/LeadingSubject:
   Exclude:
     - spec/support
 
-# Allow arrays and hashes to be counted as one line in examples
-# Also considers arrays defined with contain_exactly and match_array
+# Allow arrays, hashes, and method calls to be counted as one line in examples
 RSpec/ExampleLength:
-  CountAsOne: ["array", "hash", "contain_exactly", "match_array"]
+  CountAsOne: ["array", "hash", "method_call"]
 
 # Because 5 is a bit mean
 RSpec/MultipleMemoizedHelpers:
