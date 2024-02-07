@@ -38,7 +38,7 @@ Metrics/BlockLength:
     - test/**/*
 
 Metrics/ClassLength:
-  CountAsOne: ["array", "hash"]
+  CountAsOne: ["array", "hash", "heredoc"]
   Exclude:
     - db/migrate/**/*
     - spec/**/*
