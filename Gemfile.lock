@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boxt_rubocop (2.2.1)
+    boxt_rubocop (2.3.0)
       rubocop (= 1.61.0)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.20.2)
@@ -98,7 +98,7 @@ GEM
     docile (1.4.0)
     drb (2.2.1)
     erubi (1.12.0)
-    faker (3.2.2)
+    faker (3.2.3)
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -202,7 +202,7 @@ GEM
     rspec-mocks (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-support (3.13.0)
+    rspec-support (3.13.1)
     rubocop (1.61.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
