@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boxt_rubocop (2.3.0)
+    boxt_rubocop (2.4.0)
       rubocop (= 1.62.1)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.20.2)
@@ -102,10 +102,10 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    i18n (1.14.1)
+    i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
-    irb (1.11.2)
+    irb (1.12.0)
       rdoc
       reline (>= 0.4.2)
     json (2.7.1)
