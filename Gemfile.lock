@@ -2,12 +2,12 @@ PATH
   remote: .
   specs:
     boxt_rubocop (2.5.0)
-      rubocop (= 1.62.1)
+      rubocop (= 1.63.0)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.21.0)
       rubocop-rails (= 2.24.1)
       rubocop-rake (= 0.6.0)
-      rubocop-rspec (= 2.28.0)
+      rubocop-rspec (= 2.29.1)
 
 GEM
   remote: https://rubygems.org/
@@ -108,7 +108,7 @@ GEM
     irb (1.12.0)
       rdoc
       reline (>= 0.4.2)
-    json (2.7.1)
+    json (2.7.2)
     language_server-protocol (3.17.0.3)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -183,7 +183,7 @@ GEM
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
-    rake (13.2.0)
+    rake (13.2.1)
     rdoc (6.6.3.1)
       psych (>= 4.0.0)
     regexp_parser (2.9.0)
@@ -203,7 +203,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.1)
-    rubocop (1.62.1)
+    rubocop (1.63.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -233,7 +233,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.28.0)
+    rubocop-rspec (2.29.1)
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
@@ -272,7 +272,7 @@ PLATFORMS
 DEPENDENCIES
   boxt_rubocop!
   rails (>= 7.0.2.3, < 8)
-  rake (~> 13.0)
+  rake (~> 13.2)
   rspec (~> 3.13)
   simplecov (~> 0.22)
 
