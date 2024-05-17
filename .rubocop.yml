@@ -10,3 +10,8 @@ AllCops:
 
 Rails/RakeEnvironment:
   Enabled: false
+
+# Disabling this as, due to how we test cops (i.e. with large code snippets),
+# the individual tests are always going to be a bit long.
+RSpec/ExampleLength:
+  Enabled: false

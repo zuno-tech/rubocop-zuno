@@ -11,6 +11,10 @@ Boxt/ApiPathFormat:
   Description: 'Ensure that the API path uses kebab case'
   Enabled: false
 
+Boxt/ApiTypeParameters:
+  Description: 'Ensure that API parameters are typed'
+  Enabled: false
+
 Layout/ClassStructure:
   Enabled: true
 

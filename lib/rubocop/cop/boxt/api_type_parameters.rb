@@ -15,37 +15,47 @@ module RuboCop
       #   optional :age, type: Integer
       #
       class ApiTypeParameters < Cop
-        MSG = "Ensure each parameter has a type specified, e.g., `type: String`."
+        API_MESSAGE = "Ensure each parameter has a type specified, e.g., `type: String`."
+        ENTITY_MESSAGE = "Ensure each parameter has a type specified, e.g., `documentation: { type: String }`."
 
         def_node_matcher :param_declaration, <<-PATTERN
-          (send nil? {:optional :requires} _ $...)
+          (send nil? {:optional :requires :expose} _ $...)
+        PATTERN
+
+        def_node_search :param_with_type, <<-PATTERN
+          (send nil? {:optional :requires} _ (hash <(pair (sym :type) $_)>))
+        PATTERN
+
+        def_node_search :entity_with_type_documentation, <<-PATTERN
+          (send nil? :expose _ (hash <(pair (sym :documentation) (hash <(pair (sym :type) $_)>)) ...>))
         PATTERN
 
         def on_send(node)
-          param_declaration(node) do |args|
-            next unless grape_api_class?(node)
-            next if type_specified?(args)
+          param_declaration(node) do
+            next unless grape_api_class?(node) || grape_entity_class?(node)
 
-            add_offense(node, message: MSG)
+            if grape_api_class?(node) && param_with_type(node).none?
+              add_offense(node, message: API_MESSAGE)
+            elsif grape_entity_class?(node) && entity_with_type_documentation(node).none?
+              add_offense(node, message: ENTITY_MESSAGE)
+            end
           end
         end
 
         private
 
         def grape_api_class?(node)
-          node.each_ancestor(:class).any? do |ancestor|
-            ancestor.children.any? do |child|
-              child&.source == "Grape::API"
-            end
-          end
+          grape_parent_class?(node, "Grape::API")
         end
 
-        def type_specified?(args)
-          return false if args.empty?
+        def grape_entity_class?(node)
+          grape_parent_class?(node, "Grape::Entity")
+        end
 
-          args.any? do |arg|
-            arg.type == :hash && arg.children.any? do |pair|
-              pair.type == :pair && pair.children[0].source == "type"
+        def grape_parent_class?(node, class_name)
+          node.each_ancestor(:class).any? do |ancestor|
+            ancestor.children.any? do |child|
+              child&.source == class_name
             end
           end
         end
