@@ -11,7 +11,7 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 desc "Generate a new cop with a template"
-task :new_cop, [:cop] => :environment do |_task, args|
+task :new_cop, [:cop] do |_task, args|
   require "rubocop"
 
   cop_name = args.fetch(:cop) do
