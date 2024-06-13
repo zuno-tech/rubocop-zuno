@@ -273,6 +273,7 @@ PLATFORMS
 
 DEPENDENCIES
   boxt_rubocop!
+  net-protocol (~> 0.2)
   rails (>= 7.0.2.3, < 8)
   rake (~> 13.2)
   rspec (~> 3.13)

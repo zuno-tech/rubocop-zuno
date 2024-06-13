@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gemspec
 
 group :development do
+  gem "net-protocol", "~> 0.2"
   gem "rails", ">= 7.0.2.3", "< 8"
   gem "rake", "~> 13.2"
   gem "rspec", "~> 3.13"
