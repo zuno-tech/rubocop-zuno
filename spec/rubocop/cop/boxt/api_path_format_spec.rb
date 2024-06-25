@@ -33,7 +33,6 @@ RSpec.describe RuboCop::Cop::Boxt::ApiPathFormat, :config do
     RUBY
   end
 
-  # rubocop:disable RSpec/ExampleLength
   it "registers an offense when using get with a path that contains underscores" do
     expect_offense(<<~RUBY)
       class Test < Grape::API
@@ -69,7 +68,6 @@ RSpec.describe RuboCop::Cop::Boxt::ApiPathFormat, :config do
       end
     RUBY
   end
-  # rubocop:enable RSpec/ExampleLength
 
   it "does not register an offense when there is an underscore in the path parameter" do
     expect_no_offenses(<<~RUBY)
