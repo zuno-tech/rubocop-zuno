@@ -9,6 +9,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    ignore:
+      - dependency-name: "net-pop"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
