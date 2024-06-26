@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    boxt_rubocop (2.8.0)
+    boxt_rubocop (2.9.0)
       rubocop (= 1.64.1)
       rubocop-faker (= 1.1.0)
       rubocop-performance (= 1.21.1)
@@ -130,7 +130,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.24.0)
     mutex_m (0.2.0)
-    net-imap (0.4.13)
+    net-imap (0.4.14)
       date
       net-protocol
     net-protocol (0.2.2)
@@ -151,7 +151,7 @@ GEM
     psych (5.1.2)
       stringio
     racc (1.8.0)
-    rack (3.1.3)
+    rack (3.1.4)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -195,7 +195,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
-    rexml (3.3.0)
+    rexml (3.3.1)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
