@@ -23,11 +23,11 @@ module RuboCop
         PATTERN
 
         def_node_search :param_with_type, <<-PATTERN
-          (send nil? {:optional :requires} _ (hash <(pair (sym :type) $_)>))
+          (send nil? {:optional :requires} _ (hash <(pair (sym :type) $_) ...>))
         PATTERN
 
         def_node_search :entity_with_type_documentation, <<-PATTERN
-          (send nil? :expose _ (hash <(pair (sym :documentation) (hash <(pair (sym :type) $_)>)) ...>))
+          (send nil? :expose _ (hash <(pair (sym :documentation) (hash <(pair (sym :type) $_) ...>)) ...>))
         PATTERN
 
         def on_send(node)
