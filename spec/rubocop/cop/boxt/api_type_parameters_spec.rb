@@ -12,11 +12,31 @@ RSpec.describe RuboCop::Cop::Boxt::ApiTypeParameters, :config do
       RUBY
     end
 
+    it "does not register an offense when required parameter has type set alongside other parameters" do
+      expect_no_offenses(<<~RUBY)
+        class Test < Grape::API
+          params do
+            requires :name, type: String, foo: 123
+          end
+        end
+      RUBY
+    end
+
     it "does not register an offense when optional parameter has type set" do
       expect_no_offenses(<<~RUBY)
         class Test < Grape::API
           params do
             optional :age, type: Integer
+          end
+        end
+      RUBY
+    end
+
+    it "does not register an offense when optional parameter has type set alongside other parameters" do
+      expect_no_offenses(<<~RUBY)
+        class Test < Grape::API
+          params do
+            optional :age, type: Integer, foo: 123
           end
         end
       RUBY
@@ -50,6 +70,14 @@ RSpec.describe RuboCop::Cop::Boxt::ApiTypeParameters, :config do
       expect_no_offenses(<<~RUBY)
         class Test < Grape::Entity
           expose :name, documentation: { type: String }
+        end
+      RUBY
+    end
+
+    it "does not register an offense when parameter has type set alongside other parameters" do
+      expect_no_offenses(<<~RUBY)
+        class Test < Grape::Entity
+          expose :name, documentation: { type: String, desc: "some description" }, foo: 123
         end
       RUBY
     end
