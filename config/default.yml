@@ -8,11 +8,11 @@ AllCops:
   NewCops: enable
 
 Boxt/ApiPathFormat:
-  Description: 'Ensure that the API path uses kebab case'
+  Description: "Ensure that the API path uses kebab case"
   Enabled: false
 
 Boxt/ApiTypeParameters:
-  Description: 'Ensure that API parameters are typed'
+  Description: "Ensure that API parameters are typed"
   Enabled: false
 
 Layout/ClassStructure:
@@ -63,6 +63,10 @@ Style/Documentation:
 
 Style/DoubleNegation:
   Enabled: false
+
+# Setting this to a max of 3 as 2 is too restrictive for some of our code
+Style/SafeNavigationChainLength:
+  Max: 3
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
