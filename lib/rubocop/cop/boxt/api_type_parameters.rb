@@ -14,7 +14,7 @@ module RuboCop
       #   requires :name, type: String
       #   optional :age, type: Integer
       #
-      class ApiTypeParameters < Cop
+      class ApiTypeParameters < RuboCop::Cop::Base
         API_MESSAGE = "Ensure each parameter has a type specified, e.g., `type: String`."
         ENTITY_MESSAGE = "Ensure each parameter has a type specified, e.g., `documentation: { type: String }`."
 
