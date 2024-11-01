@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Locking rubocop versions so we can control the pending cops
-  spec.add_dependency "rubocop", "1.67.0"
+  spec.add_dependency "rubocop", "1.68.0"
   spec.add_dependency "rubocop-factory_bot", "2.26.1"
   spec.add_dependency "rubocop-faker", "1.2.0"
   spec.add_dependency "rubocop-performance", "1.22.1"
