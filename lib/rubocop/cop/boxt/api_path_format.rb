@@ -23,7 +23,7 @@ module RuboCop
       #   get  "/installation-days"
       #   namespace "password-resets"
       #
-      class ApiPathFormat < Base
+      class ApiPathFormat < RuboCop::Cop::Base
         def_node_matcher :path_defining_method_with_string_path, <<~PATTERN
           (send nil? {:post | :get | :namespace} (:str $_))
         PATTERN
