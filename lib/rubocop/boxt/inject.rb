@@ -11,7 +11,12 @@ module RuboCop
         path = CONFIG_DEFAULT.to_s
         hash = ConfigLoader.send(:load_yaml_configuration, path)
         config = Config.new(hash, path).tap(&:make_excludes_absolute)
+
+        # Using Rails.logger here will cause an error.
+        # See https://github.com/boxt/boxt_rubocop/pull/187
+        # rubocop:disable Rails/Output
         puts "configuration from #{path}" if ConfigLoader.debug?
+        # rubocop:enable Rails/Output
         config = ConfigLoader.merge_with_default(config, path)
         ConfigLoader.instance_variable_set(:@default_configuration, config)
       end
