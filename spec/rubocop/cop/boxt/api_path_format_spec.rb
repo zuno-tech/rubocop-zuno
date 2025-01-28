@@ -51,6 +51,33 @@ RSpec.describe RuboCop::Cop::Boxt::ApiPathFormat, :config do
     RUBY
   end
 
+  it "registers an offense when using put with a path that contains underscores" do
+    expect_offense(<<~RUBY)
+      class Test < Grape::API
+        put "path/snake_case"
+        ^^^^^^^^^^^^^^^^^^^^^ Use kebab-case for the API path
+      end
+    RUBY
+  end
+
+  it "registers an offense when using patch with a path that contains underscores" do
+    expect_offense(<<~RUBY)
+      class Test < Grape::API
+        patch "path/snake_case"
+        ^^^^^^^^^^^^^^^^^^^^^^^ Use kebab-case for the API path
+      end
+    RUBY
+  end
+
+  it "registers an offense when using delete with a path that contains underscores" do
+    expect_offense(<<~RUBY)
+      class Test < Grape::API
+        delete "path/snake_case"
+        ^^^^^^^^^^^^^^^^^^^^^^^^ Use kebab-case for the API path
+      end
+    RUBY
+  end
+
   it "registers an offense when using namespace with a path that contains underscores" do
     expect_offense(<<~RUBY)
       class Test < Grape::API
