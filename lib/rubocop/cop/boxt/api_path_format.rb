@@ -25,7 +25,7 @@ module RuboCop
       #
       class ApiPathFormat < RuboCop::Cop::Base
         def_node_matcher :path_defining_method_with_string_path, <<~PATTERN
-          (send nil? {:post | :get | :namespace} (:str $_))
+          (send nil? {:get | :post | :put | :patch | :delete | :namespace} (:str $_))
         PATTERN
 
         def_node_matcher :namespace_with_symbol, <<~PATTERN
