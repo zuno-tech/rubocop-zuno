@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     boxt_rubocop (2.20.0)
-      rubocop (= 1.72.1)
+      rubocop (= 1.72.2)
       rubocop-factory_bot (= 2.26.1)
       rubocop-faker (= 1.2.0)
       rubocop-performance (= 1.24.0)
@@ -67,7 +67,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
-    rubocop (1.72.1)
+    rubocop (1.72.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
