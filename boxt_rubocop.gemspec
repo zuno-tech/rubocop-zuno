@@ -32,9 +32,9 @@ Gem::Specification.new do |spec|
   # Locking rubocop versions so we can control the pending cops
   spec.add_dependency "rubocop", "1.72.2"
   spec.add_dependency "rubocop-factory_bot", "2.26.1"
-  spec.add_dependency "rubocop-faker", "1.2.0"
+  spec.add_dependency "rubocop-faker", "1.3.0"
   spec.add_dependency "rubocop-performance", "1.24.0"
-  spec.add_dependency "rubocop-rails", "2.30.1"
+  spec.add_dependency "rubocop-rails", "2.30.2"
   spec.add_dependency "rubocop-rake", "0.7.1"
   spec.add_dependency "rubocop-rspec", "3.5.0"
   spec.add_dependency "rubocop-rspec_rails", "2.30.0"
