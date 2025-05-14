@@ -2,13 +2,13 @@ PATH
   remote: .
   specs:
     boxt_rubocop (2.24.0)
-      rubocop (= 1.75.2)
+      rubocop (= 1.75.4)
       rubocop-factory_bot (= 2.27.1)
       rubocop-faker (= 1.3.0)
       rubocop-performance (= 1.25.0)
       rubocop-rails (= 2.31.0)
       rubocop-rake (= 0.7.1)
-      rubocop-rspec (= 3.5.0)
+      rubocop-rspec (= 3.6.0)
       rubocop-rspec_rails (= 2.31.0)
 
 GEM
@@ -40,7 +40,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    json (2.10.2)
+    json (2.11.3)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -68,7 +68,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
-    rubocop (1.75.2)
+    rubocop (1.75.4)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -102,7 +102,7 @@ GEM
     rubocop-rake (0.7.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    rubocop-rspec (3.5.0)
+    rubocop-rspec (3.6.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     rubocop-rspec_rails (2.31.0)
