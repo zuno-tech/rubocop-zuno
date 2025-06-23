@@ -64,6 +64,9 @@ Style/Documentation:
 Style/DoubleNegation:
   Enabled: false
 
+Style/HashSyntax:
+  EnforcedShorthandSyntax: "always"
+
 # Setting this to a max of 3 as 2 is too restrictive for some of our code
 Style/SafeNavigationChainLength:
   Max: 3
