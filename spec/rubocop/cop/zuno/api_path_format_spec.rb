@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::Cop::Boxt::ApiPathFormat, :config do
+RSpec.describe RuboCop::Cop::Zuno::ApiPathFormat, :config do
   it "does not register an offense when using get with a path in kebab-case format" do
     expect_no_offenses(<<~RUBY)
       class Test < Grape::API

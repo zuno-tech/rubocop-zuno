@@ -2,14 +2,12 @@
 
 module RuboCop
   module Cop
-    module Boxt
+    module Zuno
       # Clients expect to interface with our API using kebab-case.
       #
       # This cop ensures that our API paths are formatted using the correct case.
       #
       # Underscores are acceptable in path variables (e.g. "/path/:path_id/update")
-      #
-      # API style guide: https://github.com/boxt/boxt-docs/blob/main/coding-styles/api.md#camel-cased-endpoints
       #
       # @example
       #   # bad

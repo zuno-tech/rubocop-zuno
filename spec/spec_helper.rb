@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "boxt_rubocop"
+require "rubocop-zuno"
 require "rubocop/rspec/support"
 require "simplecov"
 

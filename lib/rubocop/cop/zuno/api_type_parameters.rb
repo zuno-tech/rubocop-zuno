@@ -2,7 +2,7 @@
 
 module RuboCop
   module Cop
-    module Boxt
+    module Zuno
       # This cop ensures that each parameter in a Grape API has a type specified.
       #
       # @example

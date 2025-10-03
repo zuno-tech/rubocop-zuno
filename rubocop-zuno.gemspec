@@ -2,21 +2,21 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "rubocop/boxt/version"
+require "rubocop/zuno/version"
 
 Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.2"
-  spec.authors = ["Boxt"]
-  spec.description = "Base Rubocop settings for all Boxt Ruby projects"
-  spec.email = ["developers@boxt.co.uk"]
-  spec.homepage = "https://github.com/boxt/boxt_rubocop"
+  spec.authors = ["Zuno"]
+  spec.description = "Base Rubocop settings for all Zuno Ruby projects"
+  spec.email = ["developers@zuno.tech"]
+  spec.homepage = "https://github.com/zuno-tech/rubocop-zuno"
   spec.license = "MIT"
   spec.metadata = {
     "rubygems_mfa_required" => "true"
   }
-  spec.name = "boxt_rubocop"
-  spec.summary = "Base Rubocop settings for all Boxt Ruby projects"
-  spec.version = RuboCop::Boxt::VERSION
+  spec.name = "rubocop-zuno"
+  spec.summary = "Base Rubocop settings for all Zuno Ruby projects"
+  spec.version = RuboCop::Zuno::VERSION
 
   spec.files = Dir[
     "*.yml",

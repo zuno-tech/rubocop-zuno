@@ -15,7 +15,7 @@ task :new_cop, [:cop] do |_task, args|
   require "rubocop"
 
   cop_name = args.fetch(:cop) do
-    warn "usage: bundle exec rake 'new_cop[Boxt/Name]'"
+    warn "usage: bundle exec rake 'new_cop[Zuno/Name]'"
     exit!
   end
 
@@ -23,7 +23,7 @@ task :new_cop, [:cop] do |_task, args|
 
   generator.write_source
   generator.write_spec
-  generator.inject_require(root_file_path: "lib/rubocop/cop/boxt_cops.rb")
+  generator.inject_require(root_file_path: "lib/rubocop/cop/zuno_cops.rb")
   generator.inject_config(config_file_path: "config/default.yml")
 
   puts generator.todo

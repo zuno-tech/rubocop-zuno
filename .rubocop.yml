@@ -1,5 +1,5 @@
 require:
-  - boxt_rubocop
+  - rubocop-zuno
 
 plugins:
   - rubocop-performance
@@ -9,6 +9,10 @@ plugins:
 
 AllCops:
   TargetRubyVersion: 3.2
+
+Naming/FileName:
+  Exclude:
+    - "lib/rubocop-zuno.rb"
 
 Rails/RakeEnvironment:
   Enabled: false
