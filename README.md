@@ -1,9 +1,9 @@
-# BOXT Rubocop
+# Rubocop Zuno
 
-[![Gem Version](https://badge.fury.io/rb/boxt_rubocop.svg)](https://badge.fury.io/rb/boxt_rubocop)
-[![CI](https://github.com/boxt/boxt_rubocop/actions/workflows/ci.yml/badge.svg)](https://github.com/boxt/boxt_rubocop/actions/workflows/ci.yml)
+[![Gem Version](https://badge.fury.io/rb/rubocop-zuno.svg)](https://badge.fury.io/rb/rubocop-zuno)
+[![CI](https://github.com/zuno-tech/rubocop-zuno/actions/workflows/ci.yml/badge.svg)](https://github.com/zuno-tech/rubocop-zuno/actions/workflows/ci.yml)
 
-Base [Rubocop](https://rubocop.org) settings for all Boxt Ruby projects.
+Base [Rubocop](https://rubocop.org) settings for all Zuno Ruby projects.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Add this line to your application's Gemfile:
 ```ruby
 group :development, :test do
   # ...
-  gem "boxt_rubocop"
+  gem "rubocop-zuno"
 end
 ```
 
@@ -32,14 +32,14 @@ Put this into your .rubocop.yml.
 
 ```yml
 require:
-  - boxt_rubocop
+  - rubocop-zuno
 ```
 
 To enable additional configuration for `rubocop-rails` and `rubocop-rspec`, add the following to your .rubocop.yml:
 
 ```yml
 inherit_gem:
-  boxt_rubocop:
+  rubocop-zuno:
     - rails.yml # use Rails cops - see Additional Extensions/Cops
     - rspec.yml # use rspec cops - see Additional Extensions/Cops
 ```
@@ -49,10 +49,10 @@ inherit_gem:
 Use the rake task new_cop to generate a cop template:
 
 ```sh
-$ bundle exec rake 'new_cop[Boxt/Name]'
-[create] lib/rubocop/cop/boxt/name.rb
-[create] spec/rubocop/cop/boxt/name_spec.rb
-[modify] lib/rubocop/cop/boxt_cops.rb - `require_relative 'boxt/name'` was injected.
+$ bundle exec rake 'new_cop[Zuno/Name]'
+[create] lib/rubocop/cop/zuno/name.rb
+[create] spec/rubocop/cop/zuno/name_spec.rb
+[modify] lib/rubocop/cop/boxt_cops.rb - `require_relative 'zuno/name'` was injected.
 [modify] A configuration for the cop is added into config/default.yml.
 
 ```
@@ -77,7 +77,7 @@ To enable these add the following to your `.rubocop.yml` file.
 
 ```yml
 inherit_gem:
-  boxt_rubocop:
+  rubocop-zuno:
   # .... add cops
 
 require:
@@ -107,7 +107,7 @@ There are also some useful Rubocop editor plugins to help with in-editor linting
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/boxt/boxt_rubocop.
+Bug reports and pull requests are welcome on GitHub at https://github.com/zuno/boxt_rubocop.
 
 ## License
 

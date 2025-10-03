@@ -7,11 +7,11 @@ AllCops:
     - vendor/**/*
   NewCops: enable
 
-Boxt/ApiPathFormat:
+Zuno/ApiPathFormat:
   Description: "Ensure that the API path uses kebab case"
   Enabled: false
 
-Boxt/ApiTypeParameters:
+Zuno/ApiTypeParameters:
   Description: "Ensure that API parameters are typed"
   Enabled: false
 

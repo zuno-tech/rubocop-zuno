@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::Cop::Boxt::ApiTypeParameters, :config do
+RSpec.describe RuboCop::Cop::Zuno::ApiTypeParameters, :config do
   context "when checking Grape::API parameters" do
     it "does not register an offense when required parameter has type set" do
       expect_no_offenses(<<~RUBY)
