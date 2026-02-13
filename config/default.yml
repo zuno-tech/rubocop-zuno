@@ -15,6 +15,10 @@ Zuno/ApiTypeParameters:
   Description: "Ensure that API parameters are typed"
   Enabled: false
 
+Zuno/FeatureFlagName:
+  Description: "Ensure feature flag names use only lowercase letters, numbers, and underscores"
+  Enabled: false
+
 Layout/ClassStructure:
   Enabled: true
 
