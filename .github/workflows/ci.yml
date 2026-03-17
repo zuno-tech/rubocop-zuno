@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: ruby/setup-ruby@19a9babd0096de1a2aa716cac395f01253934999
+      - uses: ruby/setup-ruby@dffb23f65a78bba8db45d387d5ea1bbd6be3ef18
         with:
           bundler-cache: true
       - run: bundle exec rubocop
