@@ -7,7 +7,7 @@ Base [Rubocop](https://rubocop.org) settings for all Zuno Ruby projects.
 
 ## Requirements
 
-- Ruby >= 3.0
+- Ruby >= 3.2
 
 ## Installation
 
@@ -31,7 +31,7 @@ bundle
 Put this into your .rubocop.yml.
 
 ```yml
-require:
+plugins:
   - rubocop-zuno
 ```
 
@@ -73,19 +73,20 @@ The following Rubocop gems are also installed with this gem:
 - [rubocop-rake](https://github.com/rubocop-hq/rubocop-rake)
 - [rubocop-rspec](https://github.com/rubocop-hq/rubocop-rspec)
 
-To enable these add the following to your `.rubocop.yml` file.
+`rubocop-rails` and `rubocop-rspec` are loaded automatically when you inherit `rails.yml` or `rspec.yml` from this gem.
+
+If you want to use cops from `rubocop-faker` or `rubocop-factory_bot`, add the relevant plugin to your `.rubocop.yml` file.
 
 ```yml
+plugins:
+  - rubocop-zuno
+  - rubocop-faker # if your project uses the Faker gem
+  - rubocop-factory_bot # if your project uses FactoryBot
+
 inherit_gem:
   rubocop-zuno:
-  # .... add cops
-
-require:
-  - rubocop-faker # if your project is using the Faker gem then add this
-  - rubocop-performance # Add this for performance cops
-  - rubocop-rails # if your project is a Rails app/engine then add this, plus the - rails.yml setting above
-  - rubocop-rake # if your project is using rake then add this
-  - rubocop-rspec # if your project is using rspec then add this, plus the - rspec.yml setting above
+    - rails.yml # if your project is a Rails app or engine
+    - rspec.yml # if your project uses RSpec
 ```
 
 ## Editor Plugins

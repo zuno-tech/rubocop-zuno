@@ -1,11 +1,10 @@
-require:
-  - rubocop-zuno
-
 plugins:
+  - rubocop-zuno
   - rubocop-performance
   - rubocop-rake
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-rspec_rails
 
 AllCops:
   TargetRubyVersion: 3.2
@@ -15,9 +14,4 @@ Naming/FileName:
     - "lib/rubocop-zuno.rb"
 
 Rails/RakeEnvironment:
-  Enabled: false
-
-# Disabling this as, due to how we test cops (i.e. with large code snippets),
-# the individual tests are always going to be a bit long.
-RSpec/ExampleLength:
   Enabled: false

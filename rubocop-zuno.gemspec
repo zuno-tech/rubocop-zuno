@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/zuno-tech/rubocop-zuno"
   spec.license = "MIT"
   spec.metadata = {
+    "default_lint_roller_plugin" => "RuboCop::Zuno::Plugin",
     "rubygems_mfa_required" => "true"
   }
   spec.name = "rubocop-zuno"
@@ -30,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Locking rubocop versions so we can control the pending cops
+  spec.add_dependency "lint_roller", "~> 1.1"
   spec.add_dependency "rubocop", "1.86.0"
   spec.add_dependency "rubocop-factory_bot", "2.28.0"
   spec.add_dependency "rubocop-faker", "1.3.0"
