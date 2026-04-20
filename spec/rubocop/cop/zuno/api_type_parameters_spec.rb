@@ -9,11 +9,10 @@ RSpec.describe RuboCop::Cop::Zuno::ApiTypeParameters, :config do
     RUBY
   end
 
-  def expect_offense_in_class(parent_class, class_body, marker_line, message)
+  def expect_offense_in_class(parent_class, class_body_with_marker)
     expect_offense(<<~RUBY)
       class Test < #{parent_class}
-        #{class_body}
-        #{marker_line} #{message}
+        #{class_body_with_marker}
       end
     RUBY
   end
@@ -35,11 +34,25 @@ RSpec.describe RuboCop::Cop::Zuno::ApiTypeParameters, :config do
   end
 
   def expect_missing_api_type_offense(param_call, marker_line)
-    expect_offense_in_class("Grape::API", grape_api_params(param_call), marker_line, missing_type_message)
+    expect_offense_in_class(
+      "Grape::API",
+      grape_api_params(
+        <<~RUBY
+          #{param_call}
+            #{marker_line} #{missing_type_message}
+        RUBY
+      )
+    )
   end
 
   def expect_missing_entity_type_offense
-    expect_offense_in_class("Grape::Entity", "expose :name", "^^^^^^^^^^^^", missing_entity_type_message)
+    expect_offense_in_class(
+      "Grape::Entity",
+      <<~RUBY
+        expose :name
+          ^^^^^^^^^^^^ #{missing_entity_type_message}
+      RUBY
+    )
   end
 
   context "when checking Grape::API parameters" do
