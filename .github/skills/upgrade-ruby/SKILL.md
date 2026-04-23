@@ -1,7 +1,6 @@
----
 name: upgrade-ruby
 description: 'Update Ruby version in the rubocop-zuno gem repo. Run after /upgrade-ruby-setup has checked out main and created the upgrade branch. Only .ruby-version needs updating — CI reads it dynamically.'
-argument-hint: '<old-version> <new-version> (e.g. 4.0.2 4.1.0)'
+argument-hint: '<new-version> (e.g. 4.1.0)'
 ---
 
 # Upgrade Ruby — rubocop-zuno
@@ -10,14 +9,19 @@ argument-hint: '<old-version> <new-version> (e.g. 4.0.2 4.1.0)'
 Run `/upgrade-ruby-setup` first to install Ruby via rbenv and create the upgrade branch.
 
 ## Required Inputs
-- **Old version** (e.g. `4.0.2`)
 - **New version** (e.g. `4.1.0`)
 
 ---
 
 ## Procedure
 
-### 1. Update `.ruby-version`
+### 1. Read the current version and update `.ruby-version`
+
+Before making changes, capture the current version from `.ruby-version`:
+
+```bash
+CURRENT_VERSION=$(cat .ruby-version)
+```
 
 File: `.ruby-version` — set to `<new-version>` (bare version string only).
 
@@ -40,7 +44,7 @@ bundle install
 ### 4. Verify
 
 ```bash
-grep -r "<old-version>" \
+grep -r "$CURRENT_VERSION" \
 	--include="*.rb" --include="*.yml" --include=".ruby-version" \
 	.
 ```
