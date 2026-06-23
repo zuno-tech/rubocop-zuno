@@ -24,6 +24,7 @@ RSpec/ExampleWithoutDescription:
 RSpec/LeadingSubject:
   Exclude:
     - spec/support
+
 # Because 5 is a bit mean
 RSpec/MultipleMemoizedHelpers:
   Max: 10
