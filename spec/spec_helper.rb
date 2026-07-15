@@ -5,7 +5,7 @@ require "rubocop/rspec/support"
 require "simplecov"
 
 SimpleCov.start do
-  add_filter "lib/tasks" # Added for now, may want to actually include this though
+  skip "lib/tasks" # Added for now, may want to actually include this though
   minimum_coverage 98
 end
 
