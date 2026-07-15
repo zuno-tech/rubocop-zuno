@@ -40,7 +40,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    json (2.20.0)
+    json (2.21.1)
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -139,4 +139,4 @@ DEPENDENCIES
   simplecov (~> 0.22)
 
 BUNDLED WITH
-  4.0.14
+  4.0.16
