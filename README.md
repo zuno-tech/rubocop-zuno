@@ -7,7 +7,7 @@ Base [Rubocop](https://rubocop.org) settings for all Zuno Ruby projects.
 
 ## Requirements
 
-- Ruby >= 3.2
+- Ruby >= 3.3
 
 ## Installation
 
