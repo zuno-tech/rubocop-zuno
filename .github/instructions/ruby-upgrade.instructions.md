@@ -37,10 +37,11 @@ spec.required_ruby_version = ">= X.Y.Z"  # Update as needed
 
 Update the SHA in `.github/workflows/ci.yml`:
 
-```bash
-LATEST=$(curl -s "https://api.github.com/repos/ruby/setup-ruby/commits/master" | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
-sed -i '' "s#ruby/setup-ruby@[a-f0-9]*#ruby/setup-ruby@${LATEST}#g" .github/workflows/ci.yml
-```
+    LATEST=$(curl -s "https://api.github.com/repos/ruby/setup-ruby/commits/master" | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
+    # Linux (GNU sed)
+    sed -i "s#ruby/setup-ruby@[a-f0-9]*#ruby/setup-ruby@${LATEST}#g" .github/workflows/ci.yml
+    # macOS (BSD sed)
+    sed -i '' "s#ruby/setup-ruby@[a-f0-9]*#ruby/setup-ruby@${LATEST}#g" .github/workflows/ci.yml
 
 ### 4. Regenerate Lockfile
 
