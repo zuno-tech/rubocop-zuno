@@ -7,5 +7,5 @@ gemspec
 group :development do
   gem "rake", "~> 13.3"
   gem "rspec", "~> 3.13"
-  gem "simplecov", "~> 0.22"
+  gem "simplecov", "~> 1.0"
 end
