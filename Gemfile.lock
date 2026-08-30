@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-zuno (4.4.1)
+    rubocop-zuno (4.5.0)
       lint_roller (~> 1.1)
       rubocop (= 1.89.0)
       rubocop-factory_bot (= 2.28.0)
