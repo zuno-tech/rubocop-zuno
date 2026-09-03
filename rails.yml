@@ -6,6 +6,12 @@ Rails/ApplicationController:
     - spec/**/*
     - test/**/*
 
+# Disable the BulkChangeTable cop as the strong_migrations gem (https://github.com/ankane/strong_migrations) we use to
+# prevent unsafe migrations cannot inspect change_table to check for safety, and results in devs being forced to
+# disable the safety check.
+Rails/BulkChangeTable:
+  Enabled: false
+
 Rails/SkipsModelValidations:
   Exclude:
     - db/migrate/**/*
