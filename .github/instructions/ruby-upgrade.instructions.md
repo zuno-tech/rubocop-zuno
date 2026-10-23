@@ -47,6 +47,14 @@ Pass the latest stable Bundler version (`gem search '^bundler$' --remote`). Plai
 bundle update --bundler=X.Y.Z
 ```
 
+### 5. Verify
+
+Search tracked files for the old version (escape the dots, e.g. `4\.0\.7`). It must return nothing:
+
+```bash
+git grep -nE 'ruby[ "/:-]*X\.Y\.Z|RUBY_VERSION=X\.Y\.Z|^X\.Y\.Z$|Ruby:? X\.Y\.Z'
+```
+
 ## Testing
 
 ```bash
